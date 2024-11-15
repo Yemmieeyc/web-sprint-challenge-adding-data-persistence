@@ -26,10 +26,6 @@ async function getAllTasks() {
         'projects.project_name', 
         'project.project_description');
 
-//   return tasks.map(task => ({
-//     ...task,
-//     task_completed: !!task.task_completed  // Convert integer to boolean
-//   }));
 }
 
 async function getTaskById(id) {
