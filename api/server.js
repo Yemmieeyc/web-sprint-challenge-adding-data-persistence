@@ -11,8 +11,16 @@ server.use('/api/projects',projectRouter)
 server.use('/api/resource',resourceRouter)
 server.use('/api/task',taskRouter)
 
-server.get('/', (req, res) =>{
-    res.json({message: "Welcome to the project"})
-})
+server.use((err, req, res,) => {
+  res.status(500).json({
+    message: "Something went wrong",
+    error: err.message,
+  });
+});
+module.exports = server;
 
-module.exports = server
+// server.get('/', (req, res) =>{
+//     res.json({message: "Welcome to the project"})
+// })
+
+// module.exports = server
