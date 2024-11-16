@@ -5,6 +5,20 @@ const Project = require('./model');
 
 const router = express.Router();
 
+// router.get("/", async (req, res, next) => {
+//   try {
+//     const projects = await Project.getAll();
+//     res.status(200).json(
+//       projects.map((project) => ({
+//         ...project,
+//         project_completed: Boolean(project.project_completed),
+//       }))
+//     );
+//   } catch (error) {
+//     next(error);
+//   }
+// });
+
 router.get('/', async (req, res, next) => {
   try {
     const projects = await Project.getProjects();
