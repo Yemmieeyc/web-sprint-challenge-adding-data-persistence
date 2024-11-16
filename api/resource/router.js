@@ -42,7 +42,7 @@ const router = express.Router();
 router.get('/', async (req, res, next) => {
   try {
     const resources = await Resource.getAllResources();
-    res.json(resources);
+    return res.json(resources);
   } catch (err) {
     next(err);
   }

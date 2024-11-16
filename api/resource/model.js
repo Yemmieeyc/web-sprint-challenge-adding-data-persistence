@@ -18,7 +18,7 @@
 const db = require('../../data/dbConfig');
 
 async function getAllResources() {
-  return await db('resources').select('*');
+  return await db('resources');
 }
 
 async function create(resource) {
